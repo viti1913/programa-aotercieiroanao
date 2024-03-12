@@ -1,6 +1,6 @@
 :root{ /*declaração de variáveis; PASSANDO O MOUSE EM CIMA DAS CORES VOCÊ CONSEGUE MUDÁ-LAS*/
     --cor-de-fundo: #1E1E1E; 
-    --azul: #575aff; 
+    --verde: #6FFF57; 
     --branco: #FFFFFF; 
     --botao-ativo: #3A375E; 
     --botao-inativo: rgba(58, 55, 94, 0.5); 
@@ -9,9 +9,9 @@
 body{ /*define estilização geral do conteúdo da página*/
     background-color: var(--cor-de-fundo); /*cor do fundo / var declara a variável criada em root*/
     color: var(--branco); /*cor da fonte*/
-    font-family: "Chakra Petch", sans-serif; /*tipo da fonte*/
-    font-weight: 400; /*tamanho da fonte*/
-    font-style: normal; /*estilo da fonte*/
+    font-family: "Kode Mono", monospace; /*define a fonte utilizada na página*/
+    font-optical-sizing: auto; 
+    font-style: normal;
 }
 .conteudo-principal{ /*classe conteudo-principal do HTML*/
     display: flex; /*define o layout do conteúdo: flex ou grid*/
@@ -59,7 +59,16 @@ body{ /*define estilização geral do conteúdo da página*/
 .botao:last-child{ /*last-child permite selecionar o último elemento em um grupo de elementos irmãos dentro de seu elemento definidor, neste caso o último botão*/
     border-radius: 0 40px 0 0; /*arredonda o contorno de um elemento, nesse caso o canto direito superior*/
 }
-.ativo{ /*classe botao ativo*/
+.botao.ativo{ /*classe botao ativo*/
     background-color: var(--botao-ativo); /*cor de fundo diferente pra mudar de cor*/
     border-bottom: 4px solid var(--verde); /*cor verde na borda inferior do botão*/
+}
+.abas-textos{
+    text-align: center;
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+.aba-conteudo.ativo{
+    display: block;
 }
