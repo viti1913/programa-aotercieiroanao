@@ -1,5 +1,5 @@
 :root{ /*declaração de variáveis; PASSANDO O MOUSE EM CIMA DAS CORES VOCÊ CONSEGUE MUDÁ-LAS*/
-    --cor-de-fundo: #1E1E1E; 
+    --cor-de-fundo: #090233; 
     --verde: #6FFF57; 
     --branco: #FFFFFF; 
     --botao-ativo: #3A375E; 
@@ -31,7 +31,9 @@ body{ /*define estilização geral do conteúdo da página*/
     color: var(--verde); 
 }
 .botao{ /*classe botao no HTML*/
-    font-family: "Chakra Petch", sans-serif; /*tipo/família da fonte*/
+    font-family: "Kode Mono", monospace; /*define a fonte utilizada na página*/
+    font-optical-sizing: auto; 
+    font-style: normal;
     background-color: var(--botao-inativo); /*var declara a variável criada em root*/
     color: var(--branco);
     display: flex;
@@ -63,12 +65,31 @@ body{ /*define estilização geral do conteúdo da página*/
     background-color: var(--botao-ativo); /*cor de fundo diferente pra mudar de cor*/
     border-bottom: 4px solid var(--verde); /*cor verde na borda inferior do botão*/
 }
-.abas-textos{
+.abas-textos{ /*alinhando os textos*/
     text-align: center;
     background-color: var(--texto-fundo);
     padding: 40px;
     border-radius: 0 0 40px 40px;
 }
-.aba-conteudo.ativo{
+.aba-conteudo.ativo{ /*quando clica em um botao, aparece o conteudo*/
     display: block;
+}
+.aba-conteudo{ /*quando um botao nao esta ativo, nao aparece o conteudo*/
+    display: none;
+}
+.aba-conteudo-titulo-principal{ 
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{ 
+    text-align: center;
+    color: var(--verde); 
+    text-transform: uppercase;
+}
+.contador{ /*alinhamento da contagem regressiva*/
+    font-size: 20px;
+    text-align: center;
+}
+.relogio{ /*tamanho da imagem do relogio*/
+    width: 11%;
 }
